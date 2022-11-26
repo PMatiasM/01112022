@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
-import { Modal } from "react-bootstrap";
+import { Modal, Spinner } from "react-bootstrap";
 import { Pagination, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { v4 as uuidv4 } from "uuid";
@@ -61,6 +61,15 @@ export default function Map() {
     }
   };
 
+  const handleHided = (index, video) => {
+    const media = document.querySelector(`#${video ? "video" : "img"}${index}`);
+    const spinner = document.querySelector(
+      `#${video ? "video" : "img"}Spinner${index}`
+    );
+    media.classList.toggle("hide");
+    spinner.classList.toggle("hide");
+  };
+
   useEffectOnce(() => {
     loadPlaces();
   });
@@ -111,19 +120,37 @@ export default function Map() {
             }}
             className="mySwiper"
           >
-            {currentPlace.images.map((image) => (
+            {currentPlace.images.map((image, index) => (
               <SwiperSlide key={uuidv4()}>
-                <img src={`${baseURL}/files/images/id/${image}`} alt="" />
+                <Spinner
+                  id={`imgSpinner${index}`}
+                  animation="border"
+                  variant="primary"
+                />
+                <img
+                  id={`img${index}`}
+                  className="hide"
+                  src={`${baseURL}/files/images/id/${image}`}
+                  alt=""
+                  onLoad={() => handleHided(index)}
+                />
               </SwiperSlide>
             ))}
             {currentPlace.videos.map((video, index) => (
               <SwiperSlide key={uuidv4()}>
+                <Spinner
+                  id={`videoSpinner${index}`}
+                  animation="border"
+                  variant="primary"
+                />
                 <video
                   autoPlay
                   loop
                   muted
                   id={`video${index}`}
                   onClick={() => handleMuted(index)}
+                  className="hide"
+                  onLoadedData={() => handleHided(index, true)}
                 >
                   <source
                     src={`${baseURL}/files/videos/id/${video}`}
