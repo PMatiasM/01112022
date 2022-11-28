@@ -6,13 +6,15 @@ import { Modal, Spinner } from "react-bootstrap";
 import { Pagination, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { v4 as uuidv4 } from "uuid";
+import useTitle from "../../hooks/useTitle";
 import useEffectOnce from "../../hooks/useEffectOnce";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./style.css";
 
-const baseURL = "http://192.168.15.17:31415"; // trabalhar no tamanho das coisas no telefone
+const baseURL = "http://192.168.15.17:31415";
 
 export default function Map() {
+  useTitle("Map");
   const defaultPlace = {
     name: "",
     position: [],
@@ -75,7 +77,7 @@ export default function Map() {
   });
 
   return (
-    <>
+    <div id="mapPage">
       <MapContainer
         center={[-21.755444796836585, -41.3384620909276]}
         zoom={14}
@@ -171,6 +173,6 @@ export default function Map() {
           </div>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
