@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           <div className="buttonWrapper">
             <a href="/map" className="primary-button">
-              Encontre um lugar{/*Descubra um lugar*/}
+              Encontre um lugar
             </a>
           </div>
         </Fade>

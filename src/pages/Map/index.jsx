@@ -11,7 +11,7 @@ import useEffectOnce from "../../hooks/useEffectOnce";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./style.css";
 
-const baseURL = "http://192.168.15.17:31415";
+const baseURL = "http://our-map.ddns.net/api";
 
 export default function Map() {
   useTitle("Map");
@@ -38,7 +38,7 @@ export default function Map() {
   const getIcon = (iconFile, iconSize) => {
     return L.icon({
       iconUrl: `${baseURL}/files/icons/id/${iconFile}`,
-      iconSize: iconSize,
+      iconSize: iconSize && iconSize.length ? iconSize : [45, 45],
     });
   };
 
