@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <h3 align="center">Our Map</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    Interactive map to record moments with my girlfriend ❤️
+    <br/>
+    <br/>
+    <a href="https://github.com/PMatiasM/our-map"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://our-map.ddns.net">View Demo</a>
+    .
+    <a href="https://github.com/PMatiasM/our-map/issues">Report Bug</a>
+    .
+    <a href="https://github.com/PMatiasM/our-map/issues">Request Feature</a>
+  </p>
+</p>
 
-## Available Scripts
+![Contributors](https://img.shields.io/github/contributors/PMatiasM/our-map?color=dark-green) ![Issues](https://img.shields.io/github/issues/PMatiasM/our-map)
 
-In the project directory, you can run:
+## Table Of Contents
 
-### `yarn start`
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Roadmap](#roadmap)
+* [Creating A Pull Request](#creating-a-pull-request)
+* [Authors](#authors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
+* [React](https://react.dev)
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `yarn build`
+* npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm install npm@latest -g
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo
 
-### `yarn eject`
+```sh
+git clone https://github.com/PMatiasM/our-map.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install NPM packages
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Enter API URL in `src/services/api.js`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```JS
+const baseURL = "your.api.url";
+```
 
-## Learn More
+4. Have fun!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See the [open issues](https://github.com/PMatiasM/our-map/issues) for a list of proposed features (and known issues).
+
+## Creating A Pull Request
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Authors
+
+* **Pedro Matias** - *Computer Engineering Student* - [Pedro Matias](https://github.com/PMatiasM/) - *All Work*
