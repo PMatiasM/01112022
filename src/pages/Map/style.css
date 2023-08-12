@@ -96,3 +96,42 @@
     width: auto;
   }
 }
+
+/* new */
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#iconsDiv button {
+  width: 22%;
+  margin: 0.5rem;
+  border: none;
+  background: transparent;
+}
+
+#iconsDiv button img {
+  width: 100%;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  display: none;
+}
+
+.btn-primary {
+  background-color: #50c878 !important;
+  border-color: #50c878 !important;
+}
+
+.btn-primary:focus-visible {
+  border-color: #50c878 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(80, 200, 120, 0.5) !important;
+}
+
+.text-primary {
+  color: #50c878 !important;
+}

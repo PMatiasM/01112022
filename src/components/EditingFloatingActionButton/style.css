@@ -1,0 +1,14 @@
+#editting-buttons {
+  z-index: 999;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#editting-buttons button {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}

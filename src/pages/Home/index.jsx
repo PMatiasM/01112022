@@ -9,6 +9,7 @@ import hor3 from "../../assets/hor3.jpg";
 import hor4 from "../../assets/hor4.jpeg";
 import hor5 from "../../assets/hor5.jpg";
 import imgCover from "../../assets/imageCover.jpeg";
+
 import "./style.css";
 
 export default function Home() {
@@ -61,7 +62,7 @@ export default function Home() {
           </div>
           <div className="buttonWrapper">
             <a href="/map" className="primary-button">
-              Encontre um lugar
+              Encontre um lugar{/*Descubra um lugar*/}
             </a>
           </div>
         </Fade>

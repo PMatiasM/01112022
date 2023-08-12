@@ -1,0 +1,22 @@
+.spinner-div {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form.hiden {
+  display: none;
+}
+
+#images-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#images-preview img {
+  width: 30%;
+  margin: 0.5rem;
+}
